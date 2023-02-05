@@ -3,3 +3,8 @@ export interface CustomerInput{
     password: string;
     phone: string
 }
+
+export interface LoginCustomer{
+    email: string;
+    password: string;
+}

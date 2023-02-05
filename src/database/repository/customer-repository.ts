@@ -12,4 +12,13 @@ export class CustomerRepository{
             console.log(error)
         }
     }
+
+    async FindCustomer({email}:{email: string}){
+        const existingCustomer = await CustomerModel.findOne({email})
+        return existingCustomer;
+    }
+    async FindAllCustomers(){
+        const customers = await CustomerModel.find({})
+        return customers;
+    }
 }
